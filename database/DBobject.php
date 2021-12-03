@@ -106,7 +106,6 @@ class DBobject {
 
     }
 
-
     public function delete(){
         global $database;
         $sql = "DELETE FROM " .static::$db_table . " ";

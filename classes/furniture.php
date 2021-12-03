@@ -24,7 +24,6 @@ class Furniture extends Product {
 
 
 
-
 }
 
 

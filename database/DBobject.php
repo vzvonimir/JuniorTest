@@ -45,11 +45,6 @@ class DBobject {
         $calling_class = get_called_class();
 
         $object = new $calling_class;
-        //$user_object->id = $found_user['id'];
-        //$user_object->username = $found_user['username'];
-        //$user_object->password = $found_user['password'];
-        //$user_object->first_name = $found_user['first_name'];
-        //$user_object->last_name = $found_user['last_name'];
 
         foreach($record as $key => $value){
             if($object->hasTheKey($key)){
@@ -101,14 +96,6 @@ class DBobject {
 
         $sql = "INSERT INTO " .static::$db_table . "(" . implode(",", array_keys($properties)) . ")";
         $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
-
-        //$sql = "INSERT INTO " .static::$db_table. "(SKU, name, price, size)";
-        //$sql .= " VALUES ('";
-        //$sql .= $database->escapeString($this->id) . "', '";
-        //$sql .= $database->escapeString($this->SKU) . "', '";
-        //$sql .= $database->escapeString($this->name) . "', '";
-        //$sql .= $database->escapeString($this->price) . "', '";
-        //$sql .= $database->escapeString($this->size) . "')";
 
         if($database->query($sql)){
             $this->id = $database->insertId();

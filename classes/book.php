@@ -3,7 +3,7 @@
 class Book extends Product {
 
     protected static $db_table = "books";
-    protected static $db_table_fields = array('id', 'SKU', 'name', 'price', 'weight');
+    protected static $db_table_fields = array('SKU', 'name', 'price', 'weight');
     protected $weight;
 
 

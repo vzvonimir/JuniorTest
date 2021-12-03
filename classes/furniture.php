@@ -3,7 +3,7 @@
 class Furniture extends Product {
 
     protected static $db_table = "furniture";
-    protected static $db_table_fields = array('id', 'SKU', 'name', 'price', 'dimensions');
+    protected static $db_table_fields = array( 'SKU', 'name', 'price', 'dimensions');
     protected $dimensions;
 
 

@@ -4,7 +4,7 @@
 class DVD extends Product {
 
     protected static $db_table = "dvds";
-    protected static $db_table_fields = array('id', 'SKU', 'name', 'price', 'size');
+    protected static $db_table_fields = array('SKU', 'name', 'price', 'size');
     protected $size;
 
 
